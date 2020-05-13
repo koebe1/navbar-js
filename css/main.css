@@ -18,7 +18,13 @@
     color: white;
     font-size: 22px;
     margin-right: auto;
+
+    background-image:linear-gradient(90deg,#f7c626,#e2127A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+
 
 .nav-links {
     display: flex;
@@ -48,7 +54,7 @@
     background-color: white;
     margin: 5px 0;
     border-radius: 2px;
-    transition: 500ms;
+    transition: 400ms;
 }
 
 @media screen and (max-width: 1024px) {
@@ -76,7 +82,7 @@
         flex-direction: column;
         width: 40vw;
         transform: translateX(100%);
-        transition: 500ms;
+        transition: 400ms;
     }
 
     .nav-links li {
@@ -103,4 +109,13 @@
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+/* Hover Over Effects */
+
+.nav-links li:hover {
+    background-image:linear-gradient(90deg,#f7c626,#e2127A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
