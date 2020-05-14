@@ -16,12 +16,17 @@
 
 .logo {
     color: white;
-    font-size: 22px;
+    font-size: 25px;
     margin-right: auto;
+
 
     background-image:linear-gradient(90deg,#f7c626,#e2127A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.logo:hover {
+    background-image:linear-gradient(90deg,#e2127A, #f7c626);
 }
 
 
@@ -30,7 +35,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 45%;
+    width: 45vw;
 }
 
 .nav-links a {
@@ -76,17 +81,17 @@
         position: absolute;
         right: 0px;
         height: 91vh;
-        top: 8vh;
+        top: 9vh;
         background-color: black;
         display: flex;
         flex-direction: column;
         width: 40vw;
         transform: translateX(100%);
-        transition: 400ms;
+        transition: 400ms ease-out;
     }
 
     .nav-links li {
-        //opacity: 0;
+        opacity: 0;
     }
 
     .burger {
@@ -101,6 +106,7 @@
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px,6px);
+    background-color: #e2127A;
 }
 
 .toggle .line2 {
@@ -109,13 +115,26 @@
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
+    background-color: #e2127A;
 }
 
 
-/* Hover Over Effects */
 
+/* Hover Over Effects */
 .nav-links li:hover {
     background-image:linear-gradient(90deg,#f7c626,#e2127A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Animation */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
